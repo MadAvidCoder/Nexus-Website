@@ -11,6 +11,16 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 
+.slogan {
+  background-image: linear-gradient(to right, #80a7d0, #ab80d0);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 .cta-btn {
   display: flex;
   align-items: center;
@@ -49,9 +59,9 @@
 
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Open Sans",  sans-serif;
+  --default-font: "Lexend",  system-ui, -apple-system, "Segoe UI", Lexend, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Zalando Sans Semi-Expanded",  sans-serif;
+  --nav-font: "Lexend",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -59,7 +69,8 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #666666; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #333333; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #7ea7cf; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #80a7d0; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --secondary-accent-color: #ab80d0;
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -67,11 +78,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #7ea7cf; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: var(--secondary-accent-color); /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #666666; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #7ea7cf; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: var(--secondary-accent-color); /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -213,8 +224,21 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  /* --background-color: rgba(196, 95, 41, 0.9); */
-  --background-color: rgba(0, 0, 0, 0.9);
+  /*--background-color: rgba(196, 95, 41, 0.9); */
+  /*--background-color: rgba(0, 0, 0, 0.9); */
+  /*--background-color: rgba(255, 255, 255, 0.6);*/
+  --background-color: rgba(177, 196, 214, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  --nav-color: #000000;
+}
+
+.header .sr .scrolled {
+  width: 0;
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -681,7 +705,8 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  /*background: var(--accent-color);*/
+  background: linear-gradient(to right, #80a7d0, #ab80d0);
   left: 0;
   right: 0;
   bottom: 0;
@@ -739,9 +764,28 @@ section,
   font-size: 26px;
 }
 
-.hero p span {
+.hero p .typed {
   letter-spacing: 1px;
-  border-bottom: 2px solid var(--accent-color);
+  /*border-bottom: 2px solid var(--accent-color);*/
+  position: relative;
+}
+
+.hero p .typed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #80a7d0, #ab80d0);
+  /*background-size: 300px 2px;*/
+}
+
+.hero p .typed-cursor {
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ab80d0;
+  position: relative;
+  background: none;
 }
 
 .hero .cta-btn {
@@ -874,10 +918,11 @@ section,
 
 .services .service-item:hover .icon {
   background: var(--surface-color);
+  border: 1px solid #ab80d0;
 }
 
 .services .service-item:hover .icon i {
-  color: var(--accent-color);
+  color: #ab80d0;/*var(--accent-color);*/
 }
 
 .services .service-item .title {
@@ -2219,7 +2264,8 @@ section,
   height: var(--banner-height);
   line-height: var(--banner-height);
   padding: 0 16px;
-  background: var(--accent-color, #7ec8ff);
+  /*background: var(--accent-color, #7ec8ff);*/
+  background: linear-gradient(to right, #80a7d0, #ab80d0);
   color: #fff;
   text-align: center;
   font-weight: 700;
@@ -2243,8 +2289,8 @@ section,
 
 #top-banner .banner-extra {
   display: none;
-  font-weight: 600;
-  opacity: 0.95;
+  font-weight: 500;
+  opacity: 0.90;
   white-space: nowrap;
 }
 
