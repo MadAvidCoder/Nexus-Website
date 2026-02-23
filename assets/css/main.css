@@ -948,8 +948,8 @@ section,
 # Features Section
 --------------------------------------------------------------*/
 .features {
-  --default-color: #555;
-  --heading-color: #333;
+  --default-color: #333;
+  --heading-color: #222;
 }
 
 .features .feature-box {
@@ -977,36 +977,68 @@ section,
   margin-bottom: 0;
 }
 
+/*.features .feature-box.orange {*/
+/*  background-color: #fff3e2;*/
+/*}*/
+
+/*.features .feature-box.orange i {*/
+/*  color: #edb86e;*/
+/*}*/
+
+/*.features .feature-box.blue {*/
+/*  background-color: #deedfd;*/
+/*}*/
+
+/*.features .feature-box.blue i {*/
+/*  color: #20a5f8;*/
+/*}*/
+
+/*.features .feature-box.green {*/
+/*  background-color: #d5f1e4;*/
+/*}*/
+
+/*.features .feature-box.green i {*/
+/*  color: #48c88a;*/
+/*}*/
+
+/*.features .feature-box.red {*/
+/*  background-color: #fdeded;*/
+/*}*/
+
+/*.features .feature-box.red i {*/
+/*  color: #f28484;*/
+/*}*/
+
 .features .feature-box.orange {
-  background-color: #fff3e2;
+  background-color: #5E768F;
 }
 
 .features .feature-box.orange i {
-  color: #edb86e;
+  color: #3F556B;
 }
 
 .features .feature-box.blue {
-  background-color: #deedfd;
+  background-color: #80A7D0;
 }
 
 .features .feature-box.blue i {
-  color: #20a5f8;
+  color: #5C83AB;
 }
 
 .features .feature-box.green {
-  background-color: #d5f1e4;
+  background-color: #9694D0;
 }
 
 .features .feature-box.green i {
-  color: #48c88a;
+  color: #6B69B0;
 }
 
 .features .feature-box.red {
-  background-color: #fdeded;
+  background-color: #AB80D0;
 }
 
 .features .feature-box.red i {
-  color: #f28484;
+  color: #7E57B3;
 }
 
 /*--------------------------------------------------------------
