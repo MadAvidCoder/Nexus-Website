@@ -948,8 +948,8 @@ section,
 # Features Section
 --------------------------------------------------------------*/
 .features {
-  --default-color: #333;
-  --heading-color: #222;
+  --default-color: #555;
+  --heading-color: #333;
 }
 
 .features .feature-box {
@@ -970,11 +970,15 @@ section,
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
+  /*color: #1e1e1e;*/
+  color: #edeadf;
 }
 
 .features .feature-box p {
   font-size: 15px;
   margin-bottom: 0;
+  /*color: #2a2a2a;*/
+  color: #edeadf;
 }
 
 /*.features .feature-box.orange {*/
